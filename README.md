@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# JobStation Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Job Listing Platform is a full-stack web application built using Node.js, Express, React, and a SQLite database database . The platform enables users to register, log in, and manage job listings while implementing secure authentication, role-based access control, and a user-friendly interface.
 
-## Available Scripts
+## Deployment
+The frontend is deployed on Netlify: ``` https://seshu-mark-anthony-jobstation.netlify.app/ ```
 
-In the project directory, you can run:
+## Project Structure
 
-### `npm start`
+```
+  /job-station-frontend
+  │── /src
+  │   ├── /components
+  │   │   ├── Home.js
+  │   │   ├── JobDetails.js
+  │   │   ├── Login.js
+  │   │   ├── Signup.js
+  │   │   ├── UserDashboard.js
+  │   │   ├── UserJobDetails.js
+  │   │   ├── UserJobDetailsPage.js
+  │   │   ├── CreateJob.js
+  │   │   ├── EditingJob.js
+  │   │   ├── BookMarkList.js
+  │   ├── App.js
+  │   ├── index.js
+  │   ├── App.css
+  │── /public
+  │── package.json
+  │── README.md
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features  
 
-### `npm test`
+- **User Authentication** (Login & Signup)  
+- **View Job Listings** - Browse available job opportunities  
+- **View Job Details** - See in-depth details about a specific job  
+- **Create, Edit, and Delete Job Postings** (for authenticated users)  
+- **User Dashboard** - Manage posted job listings  
+- **Bookmark & Save Jobs** - Save jobs for later reference  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Routes & API Endpoints  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Frontend Routes**  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The frontend consists of the following routes:  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### **Public Routes**  
+- `/` → Home page (list of job listings)  
+- `/login` → User login page  
+- `/signup` → User signup page  
+- `/job/:id` → View job details  
 
-### `npm run eject`
+#### **Private Routes (Requires Authentication)**  
+- `/userdashboard` → User dashboard to manage jobs  
+- `/userjobdetails/:id` → View user's job details  
+- `/jobs/new` → Create a new job listing  
+- `/jobs/:id/edit` → Edit an existing job listing  
+- `/bookmarks` → View saved/bookmarked jobs  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **API Endpoints**  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The frontend interacts with the backend deployed at:  
+**JobStation Backend**  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### **User Authentication**  
+- `POST /register` → Register a new user  
+- `POST /login` → Authenticate a user  
 
-## Learn More
+#### **Job Listings**  
+- `GET /jobs` → Retrieve all job listings  
+- `GET /jobs/:id` → Retrieve a specific job  
+- `POST /jobs` → Create a new job listing  
+- `PUT /jobs/:id` → Edit a job listing  
+- `DELETE /jobs/:id` → Delete a job listing  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### **Bookmarks**  
+- `POST /bookmarks` → Bookmark a job listing  
+- `GET /bookmarks` → Retrieve bookmarked jobs
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Setup Instructions
 
-### Code Splitting
+ ### 2. Install Setup
+   1. Navigate to the Frontend  directory:
+        ```bash
+           cd Frontend 
+        ```
+  2. Install dependencies::
+        ```bash
+           npm install
+        ```   
+  3. Start the Frontend server::
+        ```bash
+           npm start
+        ```     
+        The backend will run on http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🖥️ Backend API  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The frontend interacts with the backend deployed at:  
+```
+  This is the backend for the Job Station application, deployed on Render.
+  Backend Deployment Link: https://markanthony-backend-jobstation.onrender.com
+```
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
