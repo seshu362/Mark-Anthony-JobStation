@@ -1,0 +1,137 @@
+  
+  .container {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .form-container {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto; /* Add scroll for long content */
+    height: 100vh;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+  }
+  
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  .form-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  input,
+  select,
+  textarea {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  /* Maintain the same width for dropdowns and inputs */
+  .dropdown-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dropdown-container div {
+    flex: 1;
+  }
+  
+  textarea {
+    resize: none;
+    height: 60px;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+  }
+  
+  .skill {
+    background: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .skill span {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .cancel-btn {
+    background: #ccc;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .image-container {
+    width: 40%;
+    height: 100vh;
+    background: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 80%;
+    margin-top: 20px;
+  }
+  

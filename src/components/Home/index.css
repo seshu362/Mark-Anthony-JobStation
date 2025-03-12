@@ -1,0 +1,300 @@
+.home-initial-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 0; 
+}
+
+/* Navbar Styles */
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  height: 80px;
+  background-color: #ff5242;
+  color: white;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.home-navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.home-navbar-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.home-navbar-buttons button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.home-navbar-buttons button:hover {
+  background-color: white;
+  color: #ff5242;
+}
+
+/* Search Bar Styles */
+.home-job-filter-container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 16px;
+  background: white;
+  border: 1px solid #fecaca;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(255, 100, 100, 0.3);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home-job-filter-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Aligning dropdown properly */
+.home-skills-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* Dropdown Button */
+.home-skills-dropdown {
+  padding: 8px;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  color: #374151;
+  cursor: pointer;
+}
+
+/* Dropdown Select */
+.home-skills-dropdown-select {
+  padding: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+/* Skills badge container with horizontal scrolling */
+.home-skill-badges {
+  gap: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: 500px;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in Edge/IE */
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.home-skill-badges::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each skill badge */
+.home-skill-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Remove button inside skills */
+.home-remove-icon {
+  width: 16px;
+  height: 16px;
+  background: none;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Buttons */
+.home-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.home-clear-button {
+  color: #ef4444;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.home-apply-button {
+  background: #ef4444;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.home-no-jobs-message {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4d4d;
+  margin-top: 50px;
+}
+
+/* Job Listing Styles */
+.home-job-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 900px;
+  padding: 16px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(255, 100, 100, 0.3);
+  margin-top: 30px;
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
+.home-left-border {
+  width: 4px;
+  background: transparent;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.home-job-card:hover .home-left-border {
+  background: red;
+}
+
+.home-company-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.home-job-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home-job-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.home-job-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: gray;
+  font-size: 14px;
+}
+
+.home-company-size {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+}
+
+.home-people-icon {
+  color: #6b7280; /* Icon color */
+  font-size: 18px; /* Adjust size */
+}
+
+.home-flag {
+  width: 20px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.home-job-type {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* 🆕 Ensures skills are ABOVE the button */
+.home-skills {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  width: 420px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none;
+}
+
+.home-skill-tag {
+  background: #fee2e2;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Button styling */
+.home-view-details {
+  background: #ef4444;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-top: 20px; /* Pushes the button to the end (right side) */
+}
+
+.home-view-details:hover {
+  background: #dc2626;
+}
+
+.home-location {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}

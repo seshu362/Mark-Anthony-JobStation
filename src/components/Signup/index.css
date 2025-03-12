@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+.signup-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    background: #fff;
+    width: 50%;
+}
+
+.signup-form h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.signup-form p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-terms-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.signup-terms-container input {
+    width: auto;
+}
+
+.signup-terms-container label {
+    color: #666;
+}
+
+.signup-terms-container a {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-terms-container a:hover {
+    text-decoration: underline;
+}
+
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background-color: #d62828;
+}
+
+.signup-signin-text {
+    margin-top: 15px;
+}
+
+.signup-signin-text a {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-signin-text a:hover {
+    text-decoration: underline;
+}
+
+.signup-image {
+    width: 50%;
+    background: url("https://res.cloudinary.com/dw7dhefpb/image/upload/v1741714417/Screenshot_2025-03-11_230301_ioafkh.png")
+      no-repeat center;
+    background-size: cover;
+}
